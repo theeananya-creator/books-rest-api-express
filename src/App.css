@@ -1,0 +1,34 @@
+:root { font-family: system-ui, sans-serif; color: #1a1a1a; background: #f5f6f8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0; }
+.subtitle { color: #666; margin: 4px 0 20px; }
+.controls { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.controls input, .controls select {
+  padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+}
+.controls input { flex: 1; min-width: 200px; }
+.message { text-align: center; color: #555; }
+.error { color: #b00020; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+.card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.card img { width: 100%; display: block; aspect-ratio: 1; object-fit: cover; }
+.card-body { padding: 12px; }
+.card-body h2 { font-size: 1.05rem; margin: 0 0 6px; }
+.card-body p { margin: 4px 0; font-size: .9rem; }
+.muted { color: #777; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: #999; }
+.dot.alive { background: #2ecc71; }
+.dot.dead { background: #e74c3c; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 28px; }
+.pagination button {
+  padding: 8px 16px; border: none; border-radius: 8px; background: #2d6cdf; color: #fff; cursor: pointer;
+}
+.pagination button:disabled { background: #b8c4dc; cursor: not-allowed; }
+@media (prefers-color-scheme: dark) {
+  :root { color: #eee; background: #15171c; }
+  .card { background: #20232b; }
+  .controls input, .controls select { background: #20232b; color: #eee; border-color: #444; }
+  .subtitle, .message, .muted { color: #aaa; }
+}
